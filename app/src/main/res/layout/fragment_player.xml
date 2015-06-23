@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        tools:context="com.example.yuplayer.PlayerActivity$PlaceholderFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/player_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:background="@layout/bg_player_header"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <!-- Song Title -->
+        <TextView
+            android:id="@+id/fragment_player_txt_songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#04b3d2"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="The Good, The Bad And The Ugly"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/fragment_player_txt_songArtist"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:textColor="#04b3d2"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="The Good, The Bad And The Ugly"
+            android:layout_marginTop="30dp"/>
+
+
+
+    </RelativeLayout>
+    <!-- Song Thumbnail Image -->
+    <LinearLayout
+        android:id="@+id/songThumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/player_header_bg"
+        android:layout_above="@+id/fragment_player_sb_songSeek">
+        <ImageView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/play"
+            android:scaleType="fitXY"
+            android:id="@+id/fragment_player_imgV_songImage"
+            />
+    </LinearLayout>
+
+    <!-- Player Footer -->
+    <LinearLayout
+        android:id="@+id/player_footer_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@layout/bg_player_footer"
+        android:gravity="center">
+
+    <!-- Player Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@layout/rounded_corner"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    <!-- Previous Button -->
+    <ImageButton
+        android:id="@+id/fragment_player_imBtn_btnPrevious"
+        android:src="@android:drawable/ic_media_rew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"/>
+    <!-- Backward Button -->
+    <!-- Play Button -->
+    <ImageButton
+        android:id="@+id/fragment_player_imBtn_btnPlay"
+        android:src="@android:drawable/ic_media_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"/>
+        <!-- Forward Button -->
+
+        <!-- Next Button -->
+        <ImageButton
+            android:id="@+id/fragment_player_imBtn_btnNext"
+            android:src="@android:drawable/ic_media_ff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"/>
+    </LinearLayout>
+    </LinearLayout>
+
+    <!-- Progress Bar/Seek bar -->
+    <SeekBar
+        android:id="@+id/fragment_player_sb_songSeek"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:thumb="@drawable/seek_handler"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:layout_above="@+id/player_footer_bg" />
+
+    <!-- Timer Display -->
+    <LinearLayout
+        android:id="@+id/timerDisplay"
+        android:layout_above="@id/fragment_player_sb_songSeek"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp">
+    <!-- Current Duration Label -->
+        <TextView
+            android:id="@+id/fragment_player_txt_currentTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textColor="#04cbde"
+            android:textStyle="bold"/>
+        <!-- Total Duration Label -->
+        <TextView
+            android:id="@+id/fragment_player_txt_totalTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="#04cbde"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
